@@ -38,12 +38,36 @@ input[type=text], input[type=password] {
     padding: 5px 10px;
     background-color: rgba(255, 255, 255, 0.9);
     font-size: 15px;
-    border: 1px solid #EEE; 
+    border: 2px solid #EEE; 
 }
 
-/* 
-@media only screen and (min-width: 600px){
-    input {
-        width: 700px;
-    }
-} */
+input.input-error {
+    background-color: rgba(255, 220, 220, 1);
+    border: 2px solid rgba(255, 150, 150, 1); 
+}
+
+input:focus, textarea:focus {
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: #1da1f2;
+  }
+
+a {
+    color: rgb(128, 204, 255)
+}
+
+button.button1{
+    display:inline-block;
+    padding: 9px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid var(--forth-color);
+    color: white;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+button.button1:hover {
+    background-color:  var(--forth-color);
+}

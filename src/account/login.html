@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PamQ</title>
+    <link rel='stylesheet' href='../dist/styles.css'>
+</head>
+
+<body>
+    <main>
+        <h1 class="title">Login</h1>
+        <!-- <h1 class="title">Login</h1> -->
+        <form class="flex-container-column auth-form" id="login-form" onsubmit="return false;">
+            <div class="flex-items">
+                <label for="username"> Username:</label>
+                <input name="username" type="text" placeholder="username" required />
+            </div>
+
+            <div class="flex-items">
+                <label>Password:</label>
+                <input name="password" type="password" placeholder="password" required />
+            </div>
+
+            <div class="flex-items">
+                <button name="saba" class="button1" id="login-submit-button">Submit</button>
+
+            </div>
+
+            <div id="login-error-msg-holder">
+                <p ></p>
+              </div>
+        </form>
+    </main>
+    <a href="./signup.html">signup</a>
+    <a href="/">Home</a>
+
+    <script defer src="../dist/bundle.js"></script>
+</body>
+
+</html>
