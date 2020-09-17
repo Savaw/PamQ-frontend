@@ -1,73 +1,82 @@
 :root {
-    --first-color: #283c63;
-    --second-color: #928a97;
-    --third-color: #fbe8d3;
-    --forth-color: #f85f73;
-    --fifth-color: #c2374a;
+  --primary-color: #283c63;
+  --primary-color-dark: #001738;
+  --primary-color-light: #556691;
+  --secondary-color: #f85f73;
+  --secondary-color-light: #ff92a1;
+  --secondary-color-dark: #c02948;
 }
 
 body {
-    background-color: var(--first-color);
-    color: white; 
-    /* font-size: 15px; */
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+  margin: 0;
+  padding-top: 45px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 15px;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
+a {
+  color: rgb(155, 215, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(32, 166, 255);
+  text-decoration: underline;
+}
 
 .flex-container-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .flex-items {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 5px 0;
 }
 
 .flex-items > * {
-    padding: 7px 0;
+  padding: 7px 0;
 }
 
-input[type=text], input[type=password] {
-    padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
-    border: 2px solid #EEE; 
+input[type="text"],
+input[type="password"] {
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  border: 2px solid #eee;
 }
 
 input.input-error {
-    background-color: rgba(255, 220, 220, 1);
-    border: 2px solid rgba(255, 150, 150, 1); 
+  background-color: rgba(255, 220, 220, 1);
+  border: 2px solid rgba(255, 150, 150, 1);
 }
 
-input:focus, textarea:focus {
-    outline: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-color: #1da1f2;
-  }
-
-a {
-    color: rgb(128, 204, 255)
+input:focus,
+textarea:focus {
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #1da1f2;
 }
 
-button.button1{
-    display:inline-block;
-    padding: 9px 25px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    border: 2px solid var(--forth-color);
-    color: white;
-    font-size: 16px;
-    background-color: transparent;
+button.button1 {
+  display: inline-block;
+  padding: 9px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid var(--secondary-color);
+  color: white;
+  font-size: 16px;
+  background-color: transparent;
 }
 
 button.button1:hover {
-    background-color:  var(--forth-color);
+  background-color: var(--secondary-color);
 }

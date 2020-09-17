@@ -1,0 +1,31 @@
+#navbar {
+  background-color: var(--primary-color-dark);
+  margin: 0;
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-color: var(--secondary-color-dark);
+  border-width: 0 0 5px 0px;
+  border-style: double;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  z-index: 9999;
+}
+
+#navbar .navbar-item{
+  padding: 0px 5px;
+}
+
+#navbar a {
+  color: rgb(204, 235, 255);
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: var(--secondary-color-dark);
+}

@@ -1,5 +1,15 @@
 "use strict";
+const formPlaceHolder = document.getElementById("auth-form-container");
+const signupTemplate = document.getElementById("signup-template");
+const loginTemplate = document.getElementById("login-template");
 
+if(formPlaceHolder != undefined) {
+  var signupClone = signupTemplate.content.cloneNode(true);
+  var loginClone = loginTemplate.content.cloneNode(true);
+  formPlaceHolder.appendChild(signupClone);
+  console.log(signupClone)
+  // formPlaceHolder.replaceChild(loginClone, signupClone);
+}
 function addErrorToInput(elem) {
   elem.classList.add("input-error");
 }
