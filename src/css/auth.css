@@ -1,0 +1,20 @@
+
+input[type="text"],
+input[type="password"] {
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  border: 2px solid #eee;
+}
+
+input.input-error {
+  background-color: rgba(255, 220, 220, 1);
+  border: 2px solid rgba(255, 150, 150, 1);
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #1da1f2;
+}
