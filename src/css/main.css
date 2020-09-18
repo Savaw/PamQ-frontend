@@ -26,8 +26,8 @@ body {
 }
 
 #content-wrap {
-  padding-top: 45px; /* navbar height */
-  padding-bottom: 45px; /* footer height */
+  padding-top: 60px; /* navbar height */
+  padding-bottom: 50px; /* footer height */
 }
 
 a {
