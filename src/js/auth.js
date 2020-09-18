@@ -1,6 +1,6 @@
 "use strict";
 
-import {login, signup} from "./api.js";
+import { login, signup } from "./api.js";
 
 const signupTab = document.getElementById("signup-tab");
 const loginTab = document.getElementById("login-tab");
@@ -15,9 +15,6 @@ const signupButton = document.getElementById("signup-submit-button");
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-submit-button");
-
-const loginErrHolder = loginTabContent.getElementsByClassName("error-msg-holder")[0];
-const signupErrHolder = signupTabContent.getElementsByClassName("error-msg-holder")[0];
 
 if (signupTab != undefined && loginTab != undefined) {
   signupTab.addEventListener("click", (e) => {
@@ -66,6 +63,9 @@ for (let form of forms) {
 }
 
 if (signupButton != undefined) {
+  const signupErrHolder = signupTabContent.getElementsByClassName(
+    "error-msg-holder"
+  )[0];
   signupButton.addEventListener("click", (e) => {
     e.preventDefault();
     const username = signupForm.username;
@@ -77,20 +77,28 @@ if (signupButton != undefined) {
     if (error) {
       return;
     } else {
-      let error = signup(username.value, email.value, password.value, password_confirm.value);
+      let error = signup(
+        username.value,
+        email.value,
+        password.value,
+        password_confirm.value
+      );
       if (error === null) {
         console.log("ok");
         //todo redirect
-        signupErrHolder.innerHTML = ""
+        signupErrHolder.innerHTML = "";
       } else {
         console.log(error);
-        signupErrHolder.innerHTML = error
+        signupErrHolder.innerHTML = error;
       }
     }
   });
 }
 
 if (loginButton != undefined) {
+  const loginErrHolder = loginTabContent.getElementsByClassName(
+    "error-msg-holder"
+  )[0];
   loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     const username = loginForm.username;
@@ -105,10 +113,10 @@ if (loginButton != undefined) {
       if (error === null) {
         console.log("ok");
         //todo redirect
-        loginErrHolder.innerHTML = ""
+        loginErrHolder.innerHTML = "";
       } else {
         console.log(error);
-        loginErrHolder.innerHTML = error
+        loginErrHolder.innerHTML = error;
       }
     }
   });
