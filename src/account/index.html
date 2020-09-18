@@ -11,22 +11,25 @@
   <body>
     <div id="page-container">
       <div id="content-wrap">
-        <div class="auth-form-container-container flex-container-column">
+        <!-- <div class="auth-form-container-container flex-container-column"> -->
           <div class="auth-form-container flex-container-column">
             <ul class="top-area flex-container-row">
-              <li class="tab active"><a href="#signup">Sign Up</a></li>
-              <li class="tab"><a href="#login">Log In</a></li>
+              <li class="tab active" id="login-tab"><a href="#login">Log In</a></li>
+              <li class="tab" id="signup-tab"><a href="#signup">Sign Up</a></li>
+
             </ul>
 
             <div class="tab-content">
-              <div id="signup">
+              <div id="signup-tab-content" class="tab ">
                 <h1 class="title">Sign up</h1>
+                <p class="error-msg-holder">
+                </p>
                 <form
                   class="flex-container-column auth-form"
                   id="signup-form"
                   onsubmit="return false;"
                 >
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <label for="username"> Username:</label>
                     <input
                       name="username"
@@ -36,7 +39,7 @@
                     />
                   </div>
 
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <label>Email:</label>
                     <input
                       name="email"
@@ -46,7 +49,7 @@
                     />
                   </div>
 
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <label>Password:</label>
                     <input
                       name="password"
@@ -56,7 +59,7 @@
                     />
                   </div>
 
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <label>Confirm Password:</label>
                     <input
                       name="password-confirm"
@@ -65,7 +68,7 @@
                       required
                     />
                   </div>
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <button
                       name="saba"
                       class="button1"
@@ -75,20 +78,19 @@
                     </button>
                   </div>
 
-                  <div id="error-msg-holder">
-                    <p></p>
-                  </div>
                 </form>
               </div>
 
-              <div id="login">
+              <div id="login-tab-content" class="tab active">
                 <h1 class="title">Login</h1>
+                <p class="error-msg-holder">
+                </p>
                 <form
                   class="flex-container-column auth-form"
                   id="login-form"
                   onsubmit="return false;"
                 >
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <label for="username"> Username:</label>
                     <input
                       name="username"
@@ -98,7 +100,7 @@
                     />
                   </div>
 
-                  <div class="flex-items">
+                  <div class="flex-items form-items">
                     <label>Password:</label>
                     <input
                       name="password"
@@ -107,8 +109,8 @@
                       required
                     />
                   </div>
-
-                  <div class="flex-items">
+                  
+                  <div class="flex-items form-items">
                     <button
                       name="saba"
                       class="button1"
@@ -118,14 +120,12 @@
                     </button>
                   </div>
 
-                  <div id="error-msg-holder">
-                    <p></p>
-                  </div>
+                  
                 </form>
               </div>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
     <script defer src="../dist/bundle.js"></script>

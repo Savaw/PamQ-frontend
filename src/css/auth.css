@@ -18,17 +18,35 @@ textarea:focus {
   border-color: #1da1f2;
 }
 
-.tab-content > div:last-child {
+.auth-form {
+  width: 100%;
+}
+
+.form-items {
+  text-align: left;
+  width: 100%;
+}
+.tab-content {
+  width: 90%;
+}
+
+.tab-content > .tab:not(.active) {
   display: none;
 }
 
 .top-area {
+  width: 90%;
   list-style: none;
   padding: 0;
-  /* justify-content: space-between; */
+  
+  justify-content: space-around;
 }
 
+.top-area li {
+  width: 100%;
+}
 .top-area li a {
+  
   margin: 4px;
   text-decoration: none;
   display: block;
@@ -37,13 +55,11 @@ textarea:focus {
   border-style: solid;
   border-width: 0 0 2px 0;
   color: white;
-  /* background-color: var(--primary-color-light); */
-  /* color: #a0b3b0; */
-  /* width: 50%; */
+
   text-align: center;
   cursor: pointer;
   transition: 0.5s ease;
-  width: 90px;
+
 }
 
 .top-area li a:hover {
@@ -59,6 +75,9 @@ textarea:focus {
 .error-msg-holder {
   margin: 0;
   padding: 0;
+  color: rgba(255, 100, 100, 1);
+  font-size: 17px;
+  
 }
 
 .auth-form-container-container {
