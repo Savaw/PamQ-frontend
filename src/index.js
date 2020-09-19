@@ -1,14 +1,13 @@
 console.log("PamQ © Savaw");
 
-import './css/main.css';
-import './css/navbar-footer.css';
-import './css/auth.css';
-import './js/auth.js';
-import './js/api.js';
+import "./css/main.css";
+import "./css/navbar-footer.css";
+import "./css/auth.css";
+import "./js/auth.js";
+import "./js/api.js";
+import { logout } from "./js/api.js";
 
-
-const pageContainer =  document.getElementById("page-container");
-
+const pageContainer = document.getElementById("page-container");
 
 // Navbar
 let navbarHtml = `
@@ -16,12 +15,32 @@ let navbarHtml = `
 <a class="navbar-item" href="account/">Login/Signup</a>
 `;
 
+let navbarHtmlAuth = `
+  <a class="navbar-item" href="/">Home</a>
+  <a class="navbar-item" id="logout-button">Logout</a>
+`;
+
 let navbarDiv = document.createElement("nav");
 navbarDiv.id = "navbar";
 navbarDiv.innerHTML = navbarHtml;
 
-pageContainer.insertBefore(navbarDiv,pageContainer.firstChild);
+if (
+  localStorage.getItem("status") !== null &&
+  localStorage.getItem("status") == "loggedIn"
+) {
+  navbarDiv.innerHTML = navbarHtmlAuth;
+}
 
+pageContainer.insertBefore(navbarDiv, pageContainer.firstChild);
+
+const logoutButton = document.getElementById("logout-button");
+if (logoutButton !== undefined) {
+  logoutButton.addEventListener("click", (e) => {
+    logout();
+    // navbarDiv.innerHTML = navbarHtml;
+    window.location.href = "/account/";
+  });
+}
 
 // Footer
 let footerHtml = `
@@ -32,4 +51,4 @@ let footerHtml = `
 let footerDiv = document.createElement("footer");
 footerDiv.id = "footer";
 footerDiv.innerHTML = footerHtml;
-pageContainer.appendChild(footerDiv)
+pageContainer.appendChild(footerDiv);

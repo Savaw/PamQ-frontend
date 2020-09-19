@@ -12,119 +12,107 @@
     <div id="page-container">
       <div id="content-wrap">
         <!-- <div class="auth-form-container-container flex-container-column"> -->
-          <div class="auth-form-container flex-container-column">
-            <ul class="top-area flex-container-row">
-              <li class="tab active" id="login-tab"><a href="#login">Log In</a></li>
-              <li class="tab" id="signup-tab"><a href="#signup">Sign Up</a></li>
+        <div class="auth-form-container flex-container-column">
+          <ul class="top-area flex-container-row">
+            <li class="tab active" id="login-tab">
+              <a href="#login">Log In</a>
+            </li>
+            <li class="tab" id="signup-tab"><a href="#signup">Sign Up</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="signup-tab-content" class="tab">
+              <h1 class="title">Sign up</h1>
+              <p class="success-msg-holder"></p>
+              <p class="error-msg-holder"></p>
+              <form
+                class="flex-container-column auth-form"
+                id="signup-form"
+                onsubmit="return false;"
+              >
+                <div class="flex-items form-items">
+                  <label for="username"> Username:</label>
+                  <input
+                    name="username"
+                    type="text"
+                    placeholder="username"
+                    required
+                  />
+                </div>
 
-            </ul>
+                <div class="flex-items form-items">
+                  <label>Email:</label>
+                  <input
+                    name="email"
+                    type="text"
+                    placeholder="email"
+                    required
+                  />
+                </div>
 
-            <div class="tab-content">
-              <div id="signup-tab-content" class="tab ">
-                <h1 class="title">Sign up</h1>
-                <p class="error-msg-holder">
-                </p>
-                <form
-                  class="flex-container-column auth-form"
-                  id="signup-form"
-                  onsubmit="return false;"
-                >
-                  <div class="flex-items form-items">
-                    <label for="username"> Username:</label>
-                    <input
-                      name="username"
-                      type="text"
-                      placeholder="username"
-                      required
-                    />
-                  </div>
+                <div class="flex-items form-items">
+                  <label>Password:</label>
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="password"
+                    required
+                  />
+                </div>
 
-                  <div class="flex-items form-items">
-                    <label>Email:</label>
-                    <input
-                      name="email"
-                      type="text"
-                      placeholder="email"
-                      required
-                    />
-                  </div>
+                <div class="flex-items form-items">
+                  <label>Confirm Password:</label>
+                  <input
+                    name="password-confirm"
+                    type="password"
+                    placeholder="confirm password"
+                    required
+                  />
+                </div>
+                <div class="flex-items form-items">
+                  <button name="saba" class="button1" id="signup-submit-button">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
 
-                  <div class="flex-items form-items">
-                    <label>Password:</label>
-                    <input
-                      name="password"
-                      type="password"
-                      placeholder="password"
-                      required
-                    />
-                  </div>
+            <div id="login-tab-content" class="tab active">
+              <h1 class="title">Login</h1>
+              <p class="error-msg-holder"></p>
+              <form
+                class="flex-container-column auth-form"
+                id="login-form"
+                onsubmit="return false;"
+              >
+                <div class="flex-items form-items">
+                  <label for="username"> Username:</label>
+                  <input
+                    name="username"
+                    type="text"
+                    placeholder="username"
+                    required
+                  />
+                </div>
 
-                  <div class="flex-items form-items">
-                    <label>Confirm Password:</label>
-                    <input
-                      name="password-confirm"
-                      type="password"
-                      placeholder="confirm password"
-                      required
-                    />
-                  </div>
-                  <div class="flex-items form-items">
-                    <button
-                      name="saba"
-                      class="button1"
-                      id="signup-submit-button"
-                    >
-                      Submit
-                    </button>
-                  </div>
+                <div class="flex-items form-items">
+                  <label>Password:</label>
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="password"
+                    required
+                  />
+                </div>
 
-                </form>
-              </div>
-
-              <div id="login-tab-content" class="tab active">
-                <h1 class="title">Login</h1>
-                <p class="error-msg-holder">
-                </p>
-                <form
-                  class="flex-container-column auth-form"
-                  id="login-form"
-                  onsubmit="return false;"
-                >
-                  <div class="flex-items form-items">
-                    <label for="username"> Username:</label>
-                    <input
-                      name="username"
-                      type="text"
-                      placeholder="username"
-                      required
-                    />
-                  </div>
-
-                  <div class="flex-items form-items">
-                    <label>Password:</label>
-                    <input
-                      name="password"
-                      type="password"
-                      placeholder="password"
-                      required
-                    />
-                  </div>
-                  
-                  <div class="flex-items form-items">
-                    <button
-                      name="saba"
-                      class="button1"
-                      id="login-submit-button"
-                    >
-                      Submit
-                    </button>
-                  </div>
-
-                  
-                </form>
-              </div>
+                <div class="flex-items form-items">
+                  <button name="saba" class="button1" id="login-submit-button">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
+        </div>
         <!-- </div> -->
       </div>
     </div>

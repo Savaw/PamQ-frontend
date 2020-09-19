@@ -66,7 +66,8 @@ if (signupButton != undefined) {
   const signupErrHolder = signupTabContent.getElementsByClassName(
     "error-msg-holder"
   )[0];
-  signupButton.addEventListener("click", (e) => {
+  const successMsgHolfer = signupTabContent.getElementsByClassName("success-msg-holder")[0];
+  signupButton.addEventListener("click", async (e) => {
     e.preventDefault();
     const username = signupForm.username;
     const email = signupForm.email;
@@ -74,19 +75,21 @@ if (signupButton != undefined) {
     const password_confirm = signupForm["password-confirm"];
     const input_elems = [username, email, password, password_confirm];
     let error = checkIfEmpty(input_elems);
+
+    successMsgHolfer.innerHTML = "";
+    signupErrHolder.innerHTML = "";
+
     if (error) {
       return;
     } else {
-      let error = signup(
+      let error = await signup(
         username.value,
         email.value,
         password.value,
         password_confirm.value
       );
       if (error === null) {
-        console.log("ok");
-        //todo redirect
-        signupErrHolder.innerHTML = "";
+        successMsgHolfer.innerHTML = "User created successfully"
       } else {
         console.log(error);
         signupErrHolder.innerHTML = error;
@@ -99,21 +102,21 @@ if (loginButton != undefined) {
   const loginErrHolder = loginTabContent.getElementsByClassName(
     "error-msg-holder"
   )[0];
-  loginButton.addEventListener("click", (e) => {
+  loginButton.addEventListener("click", async (e) => {
     e.preventDefault();
     const username = loginForm.username;
     const password = loginForm.password;
     const input_elems = [username, password];
     let error = checkIfEmpty(input_elems);
 
+    loginErrHolder.innerHTML = "";
     if (error) {
       return;
     } else {
-      let error = login(username.value, password.value);
+      let error = await login(username.value, password.value);
       if (error === null) {
-        console.log("ok");
         //todo redirect
-        loginErrHolder.innerHTML = "";
+        window.location.href = "/";
       } else {
         console.log(error);
         loginErrHolder.innerHTML = error;
