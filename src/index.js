@@ -5,6 +5,9 @@ import "./css/navbar-footer.css";
 import "./css/auth.css";
 import "./js/auth.js";
 import "./js/api.js";
+import "./js/main.js";
+
+import { isLoggedIn } from "./js/utils.js";
 import { logout } from "./js/api.js";
 
 const pageContainer = document.getElementById("page-container");
@@ -24,17 +27,14 @@ let navbarDiv = document.createElement("nav");
 navbarDiv.id = "navbar";
 navbarDiv.innerHTML = navbarHtml;
 
-if (
-  localStorage.getItem("status") !== null &&
-  localStorage.getItem("status") == "loggedIn"
-) {
+if (isLoggedIn()) {
   navbarDiv.innerHTML = navbarHtmlAuth;
 }
 
 pageContainer.insertBefore(navbarDiv, pageContainer.firstChild);
 
 const logoutButton = document.getElementById("logout-button");
-if (logoutButton !== undefined) {
+if (logoutButton) {
   logoutButton.addEventListener("click", (e) => {
     logout();
     // navbarDiv.innerHTML = navbarHtml;

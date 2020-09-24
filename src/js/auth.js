@@ -16,7 +16,7 @@ const signupButton = document.getElementById("signup-submit-button");
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-submit-button");
 
-if (signupTab != undefined && loginTab != undefined) {
+if (signupTab && loginTab) {
   signupTab.addEventListener("click", (e) => {
     signupTabContent.classList.add("active");
     loginTabContent.classList.remove("active");
@@ -62,7 +62,7 @@ for (let form of forms) {
   }
 }
 
-if (signupButton != undefined) {
+if (signupButton) {
   const signupErrHolder = signupTabContent.getElementsByClassName(
     "error-msg-holder"
   )[0];
@@ -89,16 +89,16 @@ if (signupButton != undefined) {
         password_confirm.value
       );
       if (error === null) {
-        successMsgHolfer.innerHTML = "User created successfully"
+        successMsgHolfer.innerHTML = `<p style="padding:10px">User created successfully</p>`;
       } else {
         console.log(error);
-        signupErrHolder.innerHTML = error;
+        signupErrHolder.innerHTML = `<p style="padding:10px">${error}</p>`;
       }
     }
   });
 }
 
-if (loginButton != undefined) {
+if (loginButton) {
   const loginErrHolder = loginTabContent.getElementsByClassName(
     "error-msg-holder"
   )[0];
@@ -115,11 +115,10 @@ if (loginButton != undefined) {
     } else {
       let error = await login(username.value, password.value);
       if (error === null) {
-        //todo redirect
         window.location.href = "/";
       } else {
         console.log(error);
-        loginErrHolder.innerHTML = error;
+        loginErrHolder.innerHTML = `<p style="padding:10px">${error}</p>`;
       }
     }
   });

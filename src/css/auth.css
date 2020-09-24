@@ -75,16 +75,20 @@ textarea:focus {
 .error-msg-holder {
   margin: 0;
   padding: 0;
-  color: rgba(255, 100, 100, 1);
-  font-size: 17px;
+  background-color: rgba(247, 137, 137, 0.5);
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
   
 }
 
 .success-msg-holder {
   margin: 0;
   padding: 0;
-  color: rgba(100, 255, 200, 1);
-  font-size: 17px;
+  background-color: rgba(122, 240, 200, 0.5);
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
   
 }
 
