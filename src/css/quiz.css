@@ -26,13 +26,9 @@
 
 .quiz:hover {
   background-color: var(--secondary-color-light);
-  cursor: pointer;
 }
 
-.quiz:hover .quiz-title {
-    color: var(--secondary-color-dark);
 
-}
 h1 {
     /* color: #e6edff; */
     -webkit-text-stroke-width: 1.5px;
@@ -46,6 +42,10 @@ h3.quiz-title {
 .quiz-title {
   margin: 0px;
   color: var(--primary-color-dark);
+}
+.quiz-title:hover {
+    color: var(--secondary-color-dark);
+    cursor: pointer;
 }
 
 .quiz-details {
@@ -61,4 +61,10 @@ h3.quiz-title {
 }
 .quiz-details p.quiz-detail {
   color: var(--primary-color);
+}
+
+
+a .quiz-detail:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
 }

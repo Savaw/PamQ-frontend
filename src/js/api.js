@@ -94,3 +94,8 @@ export async function getQuizList() {
   const response = await getRequest(`${host}/quiz/all`);
   return response
 }
+
+export async function getQuizListByUser(username) {
+  const response = await getRequest(`${host}/quiz/all?createdby=${username}`);
+  return response
+}

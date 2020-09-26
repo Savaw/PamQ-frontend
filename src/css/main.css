@@ -63,6 +63,10 @@ a:hover {
   padding: 7px 0;
 }
 
+button {
+  outline: 0;
+}
+
 button.button1 {
   display: inline-block;
   padding: 9px 25px;
