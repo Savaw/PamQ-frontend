@@ -11,7 +11,16 @@ async function postRequest(url, data) {
     },
     body: data,
   }).then((r) => r.json().then((data) => ({ status: r.status, body: data })));
-  console.log(response);
+  return response;
+}
+
+async function getRequest(url) {
+  const response = fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    }
+  }).then((r) => r.json().then((data) => ({ status: r.status, body: data })));
   return response;
 }
 
@@ -78,4 +87,10 @@ export async function logout() {
       console.warn("Something went wrong.", error);
       return serverError;
     });
+}
+
+
+export async function getQuizList() {
+  const response = await getRequest(`${host}/quiz/all`);
+  return response
 }

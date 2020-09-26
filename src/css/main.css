@@ -36,7 +36,7 @@ a {
 
 a:hover {
   color: rgb(32, 166, 255);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .flex-container-column {
@@ -78,5 +78,20 @@ button.button1 {
 
 button.button1:hover {
   background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+button.back-button {
+  margin: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: 0px;
+  color: var(--secondary-color-light);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+button.back-button:hover {
+  color: var(--primary-color-light);
   cursor: pointer;
 }

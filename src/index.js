@@ -1,11 +1,14 @@
 console.log("PamQ © Savaw");
 
-import "./css/main.css";
+import "./js/api.js";
 import "./css/navbar-footer.css";
+
 import "./css/auth.css";
 import "./js/auth.js";
-import "./js/api.js";
-import "./js/main.js";
+import "./js/main.js"
+import "./css/main.css";
+import "./js/quiz.js";
+import "./css/quiz.css";
 
 import { isLoggedIn } from "./js/utils.js";
 import { logout } from "./js/api.js";
